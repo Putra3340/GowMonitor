@@ -165,11 +165,11 @@ namespace GowMonitor
                 lbl_status.Text = "Failed to open process";
                 return;
             }
-            
+
             //emuoffset = GetEEBaseAddress();
             timer.Interval = 1000; // Set the interval to 1 second
             timer.Tick += new EventHandler(timer_Tick);
-            
+
         }
 
         // Not working
@@ -243,7 +243,7 @@ namespace GowMonitor
                 lbl_kratosposz.Text = "Z :" + zpos.ToString();
 
                 // enemy loop
-                
+
                 int i = 1;
                 while (true)
                 {
@@ -295,6 +295,13 @@ namespace GowMonitor
 
             accessor = mmf.CreateViewAccessor(0, MaxSharedSize, MemoryMappedFileAccess.ReadWrite); // EE Mem Size
             timer.Start();
+        }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            dataGridView1.Columns["Name"].HeaderText = "Enemy Name";
+            dataGridView1.Columns["Health"].HeaderText = "Current Health";
+            dataGridView1.Columns["MaxHealth"].HeaderText = "Max Health";
         }
     }
 }

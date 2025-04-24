@@ -163,6 +163,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(392, 265);
             dataGridView1.TabIndex = 13;
+            dataGridView1.CellFormatting += dataGridView1_CellFormatting;
             // 
             // button1
             // 
@@ -226,7 +227,7 @@
             Controls.Add(lbl_death);
             Controls.Add(lbl_igt);
             Name = "GUI";
-            Text = "Form1";
+            Text = "GowMonitor";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
