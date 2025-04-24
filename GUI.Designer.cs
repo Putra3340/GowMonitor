@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             lbl_igt = new Label();
             lbl_death = new Label();
             lbl_kratoshealth = new Label();
@@ -36,10 +37,13 @@
             lbl_kratos = new Label();
             lbl_wad1 = new Label();
             lbl_wad2 = new Label();
-            lbl_kratospos = new Label();
+            lbl_kratosposx = new Label();
             lbl_kratosorb = new Label();
-            tbx_emuaddress = new TextBox();
             dataGridView1 = new DataGridView();
+            button1 = new Button();
+            lbl_status = new Label();
+            lbl_kratosposy = new Label();
+            lbl_kratosposz = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -47,7 +51,7 @@
             // 
             lbl_igt.AutoSize = true;
             lbl_igt.Font = new Font("Comic Sans MS", 18F, FontStyle.Bold);
-            lbl_igt.Location = new Point(53, 44);
+            lbl_igt.Location = new Point(396, 28);
             lbl_igt.Name = "lbl_igt";
             lbl_igt.Size = new Size(101, 35);
             lbl_igt.TabIndex = 0;
@@ -57,7 +61,7 @@
             // 
             lbl_death.AutoSize = true;
             lbl_death.Font = new Font("Comic Sans MS", 18F, FontStyle.Bold);
-            lbl_death.Location = new Point(53, 93);
+            lbl_death.Location = new Point(396, 63);
             lbl_death.Name = "lbl_death";
             lbl_death.Size = new Size(103, 35);
             lbl_death.TabIndex = 2;
@@ -67,7 +71,7 @@
             // 
             lbl_kratoshealth.AutoSize = true;
             lbl_kratoshealth.Font = new Font("Comic Sans MS", 18F, FontStyle.Bold);
-            lbl_kratoshealth.Location = new Point(53, 209);
+            lbl_kratoshealth.Location = new Point(57, 192);
             lbl_kratoshealth.Name = "lbl_kratoshealth";
             lbl_kratoshealth.Size = new Size(152, 35);
             lbl_kratoshealth.TabIndex = 3;
@@ -77,7 +81,7 @@
             // 
             lbl_kratosmagic.AutoSize = true;
             lbl_kratosmagic.Font = new Font("Comic Sans MS", 18F, FontStyle.Bold);
-            lbl_kratosmagic.Location = new Point(53, 256);
+            lbl_kratosmagic.Location = new Point(57, 227);
             lbl_kratosmagic.Name = "lbl_kratosmagic";
             lbl_kratosmagic.Size = new Size(81, 35);
             lbl_kratosmagic.TabIndex = 4;
@@ -87,7 +91,7 @@
             // 
             lbl_kratosrage.AutoSize = true;
             lbl_kratosrage.Font = new Font("Comic Sans MS", 18F, FontStyle.Bold);
-            lbl_kratosrage.Location = new Point(57, 302);
+            lbl_kratosrage.Location = new Point(57, 262);
             lbl_kratosrage.Name = "lbl_kratosrage";
             lbl_kratosrage.Size = new Size(69, 35);
             lbl_kratosrage.TabIndex = 5;
@@ -97,7 +101,7 @@
             // 
             lbl_kratos.AutoSize = true;
             lbl_kratos.Font = new Font("Comic Sans MS", 18F, FontStyle.Bold);
-            lbl_kratos.Location = new Point(53, 153);
+            lbl_kratos.Location = new Point(57, 137);
             lbl_kratos.Name = "lbl_kratos";
             lbl_kratos.Size = new Size(73, 35);
             lbl_kratos.TabIndex = 6;
@@ -107,7 +111,7 @@
             // 
             lbl_wad1.AutoSize = true;
             lbl_wad1.Font = new Font("Comic Sans MS", 18F, FontStyle.Bold);
-            lbl_wad1.Location = new Point(290, 153);
+            lbl_wad1.Location = new Point(399, 121);
             lbl_wad1.Name = "lbl_wad1";
             lbl_wad1.Size = new Size(100, 35);
             lbl_wad1.TabIndex = 7;
@@ -117,58 +121,102 @@
             // 
             lbl_wad2.AutoSize = true;
             lbl_wad2.Font = new Font("Comic Sans MS", 18F, FontStyle.Bold);
-            lbl_wad2.Location = new Point(290, 209);
+            lbl_wad2.Location = new Point(399, 171);
             lbl_wad2.Name = "lbl_wad2";
             lbl_wad2.Size = new Size(100, 35);
             lbl_wad2.TabIndex = 8;
             lbl_wad2.Text = "WAD 2";
             // 
-            // lbl_kratospos
+            // lbl_kratosposx
             // 
-            lbl_kratospos.AutoSize = true;
-            lbl_kratospos.Font = new Font("Comic Sans MS", 18F, FontStyle.Bold);
-            lbl_kratospos.Location = new Point(290, 399);
-            lbl_kratospos.Name = "lbl_kratospos";
-            lbl_kratospos.Size = new Size(53, 35);
-            lbl_kratospos.TabIndex = 9;
-            lbl_kratospos.Text = "pos";
+            lbl_kratosposx.AutoSize = true;
+            lbl_kratosposx.Font = new Font("Comic Sans MS", 18F, FontStyle.Bold);
+            lbl_kratosposx.Location = new Point(57, 370);
+            lbl_kratosposx.Name = "lbl_kratosposx";
+            lbl_kratosposx.Size = new Size(53, 35);
+            lbl_kratosposx.TabIndex = 9;
+            lbl_kratosposx.Text = "pos";
             // 
             // lbl_kratosorb
             // 
             lbl_kratosorb.AutoSize = true;
             lbl_kratosorb.Font = new Font("Comic Sans MS", 18F, FontStyle.Bold);
-            lbl_kratosorb.Location = new Point(53, 351);
+            lbl_kratosorb.Location = new Point(57, 297);
             lbl_kratosorb.Name = "lbl_kratosorb";
             lbl_kratosorb.Size = new Size(54, 35);
             lbl_kratosorb.TabIndex = 11;
             lbl_kratosorb.Text = "orb";
             // 
-            // tbx_emuaddress
-            // 
-            tbx_emuaddress.Location = new Point(546, 36);
-            tbx_emuaddress.Name = "tbx_emuaddress";
-            tbx_emuaddress.Size = new Size(225, 23);
-            tbx_emuaddress.TabIndex = 12;
-            tbx_emuaddress.TextChanged += lbl_emuaddress_TextChanged;
-            // 
             // dataGridView1
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(396, 121);
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridView1.Location = new Point(399, 241);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(392, 265);
             dataGridView1.TabIndex = 13;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(57, 47);
+            button1.Name = "button1";
+            button1.Size = new Size(139, 51);
+            button1.TabIndex = 14;
+            button1.Text = "Connect";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // lbl_status
+            // 
+            lbl_status.AutoSize = true;
+            lbl_status.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_status.Location = new Point(57, 19);
+            lbl_status.Name = "lbl_status";
+            lbl_status.Size = new Size(62, 25);
+            lbl_status.TabIndex = 15;
+            lbl_status.Text = "Status";
+            // 
+            // lbl_kratosposy
+            // 
+            lbl_kratosposy.AutoSize = true;
+            lbl_kratosposy.Font = new Font("Comic Sans MS", 18F, FontStyle.Bold);
+            lbl_kratosposy.Location = new Point(57, 405);
+            lbl_kratosposy.Name = "lbl_kratosposy";
+            lbl_kratosposy.Size = new Size(53, 35);
+            lbl_kratosposy.TabIndex = 16;
+            lbl_kratosposy.Text = "pos";
+            // 
+            // lbl_kratosposz
+            // 
+            lbl_kratosposz.AutoSize = true;
+            lbl_kratosposz.Font = new Font("Comic Sans MS", 18F, FontStyle.Bold);
+            lbl_kratosposz.Location = new Point(57, 438);
+            lbl_kratosposz.Name = "lbl_kratosposz";
+            lbl_kratosposz.Size = new Size(53, 35);
+            lbl_kratosposz.TabIndex = 17;
+            lbl_kratosposz.Text = "pos";
             // 
             // GUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(815, 566);
+            Controls.Add(lbl_kratosposz);
+            Controls.Add(lbl_kratosposy);
+            Controls.Add(lbl_status);
+            Controls.Add(button1);
             Controls.Add(dataGridView1);
-            Controls.Add(tbx_emuaddress);
             Controls.Add(lbl_kratosorb);
-            Controls.Add(lbl_kratospos);
+            Controls.Add(lbl_kratosposx);
             Controls.Add(lbl_wad2);
             Controls.Add(lbl_wad1);
             Controls.Add(lbl_kratos);
@@ -194,9 +242,12 @@
         private Label lbl_kratos;
         private Label lbl_wad1;
         private Label lbl_wad2;
-        private Label lbl_kratospos;
+        private Label lbl_kratosposx;
         private Label lbl_kratosorb;
-        private TextBox tbx_emuaddress;
         private DataGridView dataGridView1;
+        private Button button1;
+        private Label lbl_status;
+        private Label lbl_kratosposy;
+        private Label lbl_kratosposz;
     }
 }
